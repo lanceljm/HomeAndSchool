@@ -29,8 +29,10 @@ class HSLoginController: UIViewController {
         view.addSubview(loginBtn)
     }
     
-    ///登录事件
+    ///登录事件///登录按钮的监听回调方法
     func loginBtnClicked() {
+        
+        ///获得主窗口，重置根页面
         UIApplication.shared.keyWindow?.rootViewController = HSTabBarController()
         print("登录")
     }
