@@ -10,6 +10,9 @@ import UIKit
 
 class HSTabBarController: UITabBarController {
 
+    //传递左边按钮的闭包属性
+    var leftBtnClick:(() -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +28,6 @@ class HSTabBarController: UITabBarController {
             else {
             return
         }
-        print(disArr)
         ///添加子控制器，一次添加，有顺序
         for dic in disArr {
             //使用自定义的方法根据传入的字典来初始化
@@ -53,10 +55,18 @@ class HSTabBarController: UITabBarController {
         vc.title = dic["title"] as? String
         vc.tabBarItem.image = UIImage(named: "\(imageName)_nor")
         vc.tabBarItem.selectedImage = UIImage(named: "\(imageName)_press")?.withRenderingMode(.alwaysOriginal)/*渲染，使图片保持原色*/
+        //添加左侧侧滑按钮
+        let leftBtn = UIBarButtonItem(imageName: "icon_menu", taget: self, action: #selector(leftBtnClicked))
+        vc.navigationItem.leftBarButtonItem = leftBtn
+        
         //包装一个导航控制器
-        let naviVC = UINavigationController(rootViewController: vc)
+        let naviVC = HSNavigationController(rootViewController: vc)
         addChildViewController(naviVC)
         
-        
+    }
+    
+    func leftBtnClicked() {
+        //执行闭包，传递事件
+        leftBtnClick?()
     }
 }

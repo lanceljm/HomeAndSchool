@@ -33,7 +33,7 @@ class HSLoginController: UIViewController {
     func loginBtnClicked() {
         
         ///获得主窗口，重置根页面
-        UIApplication.shared.keyWindow?.rootViewController = HSTabBarController()
+        UIApplication.shared.keyWindow?.rootViewController = HSDrawerController()
         print("登录")
     }
     deinit {
