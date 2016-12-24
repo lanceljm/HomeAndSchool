@@ -55,6 +55,7 @@ class HSTabBarController: UITabBarController {
         vc.title = dic["title"] as? String
         vc.tabBarItem.image = UIImage(named: "\(imageName)_nor")
         vc.tabBarItem.selectedImage = UIImage(named: "\(imageName)_press")?.withRenderingMode(.alwaysOriginal)/*渲染，使图片保持原色*/
+        
         //添加左侧侧滑按钮
         let leftBtn = UIBarButtonItem(imageName: "icon_menu", taget: self, action: #selector(leftBtnClicked))
         vc.navigationItem.leftBarButtonItem = leftBtn

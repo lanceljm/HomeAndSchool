@@ -24,13 +24,21 @@ class HSDrawerController: UIViewController {
     //抽屉的动画时长
     let animationTime:TimeInterval = 0.5
     
+    //记录手势开始的位置
+    var startPoint:CGPoint = CGPoint()
+    
+    //计算偏移距离的比例
+    var scaleOffSet:CGFloat {
+        return leftViewMaxOffSet/(leftViewWidth + 3)
+    }
+    
     
     //MARK:懒加载遮盖视图
     lazy var coverView:UIButton = {
         let btn = UIButton(type: .custom)
         btn.frame = UIScreen.main.bounds
         btn.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        btn.alpha = 0.2
+        btn.alpha = 0.6
         return btn
     }()
     
@@ -65,7 +73,7 @@ class HSDrawerController: UIViewController {
         //添加控制器作为子控制器时必须添加视图作为子视图
         view.addSubview(tabbarVC.view)
         
-        //给coverview赋值
+        //赋值闭包代码块
         tabbarVC.leftBtnClick = { [weak self] in
             if (self?.tabbarVC.view.transform.tx)! > 0 {
                 self?.closeAnimation()
@@ -85,6 +93,50 @@ class HSDrawerController: UIViewController {
     
     //MARK:手势的回调方法
     func panGestureChange(gesture:UIPanGestureRecognizer)  {
+        //手势在使用的时候要注意手势的状态、手势的过程
+        switch gesture.state {
+        case .began:
+            //手势的初始位置
+            startPoint = gesture.location(in: gesture.view)
+        case .changed:
+            //获得当前手指的位置
+            let offset = gesture.translation(in: gesture.view)
+            //计算两个视图的偏移量
+            let newOffSet = tabbarVC.view.transform.tx + offset.x
+            ///判断，当偏移量大于最大偏移量时打开视图
+            if newOffSet >= leftViewMaxOffSet {
+                openAnimate()
+                return
+            }
+            //当左边界越界时，当前偏移量小于0
+            if newOffSet <= 0 {
+                closeAnimation()
+                return
+            }
+            //计算左边视图的偏移量
+            let newOffSet_left = leftVC.view.transform.tx + offset.x*scaleOffSet
+            
+            //标签视图的偏移
+            tabbarVC.view.transform = CGAffineTransform(translationX: newOffSet, y: 0)
+            //左边视图的偏移
+            leftVC.view.transform = CGAffineTransform(translationX: newOffSet_left, y: 0)
+            
+            //注意手势拖动是增加的偏移量时累加，最后必须恢复
+            gesture.setTranslation(CGPoint(), in: gesture.view)
+            
+        case .ended:
+            //获得结束手势的位置
+            let endPoint = gesture.location(in: gesture.view)
+            ///这里才是决定手势拖动是否执行动画的地方
+            if endPoint.x > startPoint.x {
+                openAnimate()
+            }else{
+                closeAnimation()
+            }
+            
+        default:
+            break
+        }
         
     }
     
@@ -96,8 +148,10 @@ class HSDrawerController: UIViewController {
         coverView.addTarget(self, action: #selector(closeAnimation), for: .touchUpInside)
         //移动标签控制器视图
         UIView.animate(withDuration: animationTime) { [weak self] in
-            self?.tabbarVC.view.transform = CGAffineTransform(translationX: (self?.leftViewWidth)!, y: 0)
+            self?.tabbarVC.view.transform = CGAffineTransform(translationX: (self?.leftViewWidth)! + 3, y: 0)
             self?.leftVC.view.transform = CGAffineTransform.identity
+            //设置遮盖视图的透明度
+            self?.coverView.alpha = 0.6
         }
     }
     
@@ -107,6 +161,8 @@ class HSDrawerController: UIViewController {
         UIView.animate(withDuration: animationTime, animations: { 
             self.tabbarVC.view.transform = CGAffineTransform.identity//恢复到初始值
             self.leftVC.view.transform = CGAffineTransform(translationX: -(self.leftViewMaxOffSet), y: 0)
+            //设置透明度，使视图在点击关闭按键时就透明，而不是视图被移除时才透明
+            self.coverView.alpha = 0.0
         }) { (_) in
             self.coverView.removeFromSuperview()
         }
