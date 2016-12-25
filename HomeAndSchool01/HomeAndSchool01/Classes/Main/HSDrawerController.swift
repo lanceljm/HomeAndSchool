@@ -32,13 +32,16 @@ class HSDrawerController: UIViewController {
         return leftViewMaxOffSet/(leftViewWidth + 3)
     }
     
+    //遮盖时刻的透明度
+    let coverViewAlpha:CGFloat = 0.8
+    
     
     //MARK:懒加载遮盖视图
     lazy var coverView:UIButton = {
         let btn = UIButton(type: .custom)
         btn.frame = UIScreen.main.bounds
         btn.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        btn.alpha = 0.6
+        btn.alpha = 0.8
         return btn
     }()
     
@@ -103,11 +106,16 @@ class HSDrawerController: UIViewController {
             let offset = gesture.translation(in: gesture.view)
             //计算两个视图的偏移量
             let newOffSet = tabbarVC.view.transform.tx + offset.x
+//            print("tabbar视图的偏移量：\(tabbarVC.view.transform.tx)")
+//            print("当前手指位置的x:\(offset.x)")
             ///判断，当偏移量大于最大偏移量时打开视图
             if newOffSet >= leftViewMaxOffSet {
                 openAnimate()
                 return
             }
+//            print("两个视图的偏移量：\(newOffSet)")
+//            
+//            print("左边视图的最大偏移量：\(leftViewMaxOffSet)")
             //当左边界越界时，当前偏移量小于0
             if newOffSet <= 0 {
                 closeAnimation()
@@ -128,7 +136,7 @@ class HSDrawerController: UIViewController {
             //获得结束手势的位置
             let endPoint = gesture.location(in: gesture.view)
             ///这里才是决定手势拖动是否执行动画的地方
-            if endPoint.x > startPoint.x {
+            if endPoint.x > leftViewMaxOffSet/*startPoint.x */{
                 openAnimate()
             }else{
                 closeAnimation()

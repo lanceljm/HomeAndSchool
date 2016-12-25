@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AB16AA01E0E56B300972AFF /* HSScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16A9F1E0E56B300972AFF /* HSScheduleViewController.swift */; };
+		1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */; };
+		1AB16AA41E0E56E200972AFF /* HSFeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA31E0E56E200972AFF /* HSFeedBackViewController.swift */; };
+		1AB16AA61E0E573400972AFF /* HSSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA51E0E573400972AFF /* HSSetUpViewController.swift */; };
 		1AE9C5A11E0BEAF70036F9E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C5A01E0BEAF70036F9E3 /* AppDelegate.swift */; };
 		1AE9C5A61E0BEAF70036F9E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE9C5A41E0BEAF70036F9E3 /* Main.storyboard */; };
 		1AE9C5A81E0BEAF70036F9E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE9C5A71E0BEAF70036F9E3 /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AB16A9F1E0E56B300972AFF /* HSScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScheduleViewController.swift; sourceTree = "<group>"; };
+		1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSAboutUsViewController.swift; sourceTree = "<group>"; };
+		1AB16AA31E0E56E200972AFF /* HSFeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSFeedBackViewController.swift; sourceTree = "<group>"; };
+		1AB16AA51E0E573400972AFF /* HSSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSSetUpViewController.swift; sourceTree = "<group>"; };
 		1AE9C59D1E0BEAF70036F9E3 /* HomeAndSchool01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAndSchool01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE9C5A01E0BEAF70036F9E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE9C5A51E0BEAF70036F9E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				1AE9C61E1E0D14630036F9E3 /* HSLeftViewController.swift */,
+				1AB16A9F1E0E56B300972AFF /* HSScheduleViewController.swift */,
+				1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */,
+				1AB16AA31E0E56E200972AFF /* HSFeedBackViewController.swift */,
+				1AB16AA51E0E573400972AFF /* HSSetUpViewController.swift */,
 			);
 			path = LeftView;
 			sourceTree = "<group>";
@@ -263,11 +275,15 @@
 				1AE9C5C51E0BEFB10036F9E3 /* HSHomeworkController.swift in Sources */,
 				1AE9C5CD1E0BF2230036F9E3 /* UIColor+Extension.swift in Sources */,
 				1AE9C5CB1E0BF2050036F9E3 /* Bundle+Extension.swift in Sources */,
+				1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */,
 				1AE9C6211E0D160D0036F9E3 /* HSCommonFile.swift in Sources */,
+				1AB16AA01E0E56B300972AFF /* HSScheduleViewController.swift in Sources */,
 				1AE9C5C11E0BEF5D0036F9E3 /* HSTabBarController.swift in Sources */,
 				1AE9C61D1E0D12EC0036F9E3 /* HSNavigationController.swift in Sources */,
 				1AE9C5C71E0BEFC40036F9E3 /* HSClassroomController.swift in Sources */,
+				1AB16AA61E0E573400972AFF /* HSSetUpViewController.swift in Sources */,
 				1AE9C6231E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift in Sources */,
+				1AB16AA41E0E56E200972AFF /* HSFeedBackViewController.swift in Sources */,
 				1AE9C61F1E0D14630036F9E3 /* HSLeftViewController.swift in Sources */,
 				1AE9C5C91E0BEFD30036F9E3 /* HSExaminationController.swift in Sources */,
 				1AE9C5A11E0BEAF70036F9E3 /* AppDelegate.swift in Sources */,
