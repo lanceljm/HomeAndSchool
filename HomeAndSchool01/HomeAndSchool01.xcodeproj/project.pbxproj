@@ -29,6 +29,7 @@
 		1AE9C6211E0D160D0036F9E3 /* HSCommonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C6201E0D160D0036F9E3 /* HSCommonFile.swift */; };
 		1AE9C6231E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C6221E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift */; };
 		1AE9C6251E0D1E340036F9E3 /* HSDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C6241E0D1E340036F9E3 /* HSDrawerController.swift */; };
+		F884E713593D551B355B46AD /* Pods_HomeAndSchool01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,9 @@
 		1AE9C6201E0D160D0036F9E3 /* HSCommonFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSCommonFile.swift; sourceTree = "<group>"; };
 		1AE9C6221E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarbuttomItem+Extension.swift"; sourceTree = "<group>"; };
 		1AE9C6241E0D1E340036F9E3 /* HSDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSDrawerController.swift; sourceTree = "<group>"; };
+		B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeAndSchool01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C68F51CB9438098C149599A7 /* Pods-HomeAndSchool01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.release.xcconfig"; sourceTree = "<group>"; };
+		F158E030843FCFA3E07AC947 /* Pods-HomeAndSchool01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F884E713593D551B355B46AD /* Pods_HomeAndSchool01.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,8 @@
 			children = (
 				1AE9C59F1E0BEAF70036F9E3 /* HomeAndSchool01 */,
 				1AE9C59E1E0BEAF70036F9E3 /* Products */,
+				3834A40EC884D00162C3DB66 /* Pods */,
+				47EC7401B0C5A3E69877C8D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +202,23 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		3834A40EC884D00162C3DB66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F158E030843FCFA3E07AC947 /* Pods-HomeAndSchool01.debug.xcconfig */,
+				C68F51CB9438098C149599A7 /* Pods-HomeAndSchool01.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47EC7401B0C5A3E69877C8D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AE9C5AF1E0BEAF70036F9E3 /* Build configuration list for PBXNativeTarget "HomeAndSchool01" */;
 			buildPhases = (
+				6C25B82249B382B59CCA5B0A /* [CP] Check Pods Manifest.lock */,
 				1AE9C5991E0BEAF70036F9E3 /* Sources */,
 				1AE9C59A1E0BEAF70036F9E3 /* Frameworks */,
 				1AE9C59B1E0BEAF70036F9E3 /* Resources */,
+				B5082E472481D9DAD4FCAB16 /* [CP] Embed Pods Frameworks */,
+				44BCDF0698F4173022EAD143 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44BCDF0698F4173022EAD143 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C25B82249B382B59CCA5B0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5082E472481D9DAD4FCAB16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1AE9C5991E0BEAF70036F9E3 /* Sources */ = {
@@ -408,6 +483,7 @@
 		};
 		1AE9C5B01E0BEAF70036F9E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F158E030843FCFA3E07AC947 /* Pods-HomeAndSchool01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2PC8J9MPF4;
@@ -422,6 +498,7 @@
 		};
 		1AE9C5B11E0BEAF70036F9E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C68F51CB9438098C149599A7 /* Pods-HomeAndSchool01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2PC8J9MPF4;

@@ -26,9 +26,10 @@ class HSFeedBackViewController: UIViewController {
     //设置uiview相关的属性
     func customTextViewDelegate() {
         customTextView.delegate = self
+        
         customTextBtn.alpha = 0
         if customTextView.text.isEmpty {
-            customLabel.isHidden = false
+            customLabel.alpha = 1.0
         }
     }
     //删除按钮的事件

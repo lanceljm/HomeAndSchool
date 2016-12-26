@@ -56,7 +56,7 @@ class HSLeftViewController: UIViewController {
         
     }
     
-    //课表监听事件
+    //按钮监听事件
     func btnClicked(sender:UIButton) {
         switch sender.tag {
         case 100:

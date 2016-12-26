@@ -383,9 +383,11 @@
                                 <rect key="frame" x="340" y="92" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="XSc-rV-WPW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="YWL-oh-8my"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="bXB-mC-1d2"/>
                                     <constraint firstAttribute="height" constant="20" id="kz2-XY-cRm"/>
                                 </constraints>
-                                <state key="normal" title="Button" backgroundImage="textViewBtn"/>
+                                <state key="normal" title="Button" backgroundImage="removeall"/>
                                 <connections>
                                     <action selector="customTextViewBtn:" destination="Pqe-ca-8B0" eventType="touchUpInside" id="xtn-TC-zP8"/>
                                 </connections>
@@ -444,7 +446,7 @@
         <image name="feedback" width="36" height="28"/>
         <image name="log_out" width="34" height="36"/>
         <image name="logo1" width="29" height="29"/>
-        <image name="setupImage" width="20" height="20"/>
-        <image name="textViewBtn" width="10" height="10"/>
+        <image name="removeall" width="32" height="32"/>
+        <image name="setupImage" width="34" height="36"/>
     </resources>
 </document>
