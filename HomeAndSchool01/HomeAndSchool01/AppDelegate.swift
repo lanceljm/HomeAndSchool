@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         //初始化登录界面
-        let loginVC = HSLoginController()
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HSLoginController")
         window?.rootViewController = loginVC
         window?.makeKeyAndVisible()
         

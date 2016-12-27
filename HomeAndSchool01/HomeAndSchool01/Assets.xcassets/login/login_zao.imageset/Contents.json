@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "login_zao.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "leftBtnBullets.png",
       "scale" : "2x"
     },
     {

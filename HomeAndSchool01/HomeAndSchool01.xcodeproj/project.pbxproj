@@ -11,6 +11,7 @@
 		1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */; };
 		1AB16AA41E0E56E200972AFF /* HSFeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA31E0E56E200972AFF /* HSFeedBackViewController.swift */; };
 		1AB16AA61E0E573400972AFF /* HSSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA51E0E573400972AFF /* HSSetUpViewController.swift */; };
+		1ADE365D1E113DF3001609DE /* HSAFNWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE365C1E113DF3001609DE /* HSAFNWorkTools.swift */; };
 		1AE9C5A11E0BEAF70036F9E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C5A01E0BEAF70036F9E3 /* AppDelegate.swift */; };
 		1AE9C5A61E0BEAF70036F9E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE9C5A41E0BEAF70036F9E3 /* Main.storyboard */; };
 		1AE9C5A81E0BEAF70036F9E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE9C5A71E0BEAF70036F9E3 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSAboutUsViewController.swift; sourceTree = "<group>"; };
 		1AB16AA31E0E56E200972AFF /* HSFeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSFeedBackViewController.swift; sourceTree = "<group>"; };
 		1AB16AA51E0E573400972AFF /* HSSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSSetUpViewController.swift; sourceTree = "<group>"; };
+		1ADE365C1E113DF3001609DE /* HSAFNWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSAFNWorkTools.swift; sourceTree = "<group>"; };
 		1AE9C59D1E0BEAF70036F9E3 /* HomeAndSchool01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAndSchool01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE9C5A01E0BEAF70036F9E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE9C5A51E0BEAF70036F9E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		1AE9C5BD1E0BECCD0036F9E3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1ADE365C1E113DF3001609DE /* HSAFNWorkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				1AE9C5C51E0BEFB10036F9E3 /* HSHomeworkController.swift in Sources */,
 				1AE9C5CD1E0BF2230036F9E3 /* UIColor+Extension.swift in Sources */,
 				1AE9C5CB1E0BF2050036F9E3 /* Bundle+Extension.swift in Sources */,
+				1ADE365D1E113DF3001609DE /* HSAFNWorkTools.swift in Sources */,
 				1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */,
 				1AE9C6211E0D160D0036F9E3 /* HSCommonFile.swift in Sources */,
 				1AB16AA01E0E56B300972AFF /* HSScheduleViewController.swift in Sources */,
