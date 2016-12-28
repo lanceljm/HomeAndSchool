@@ -19,6 +19,31 @@ class HSLeftViewController: UIViewController {
     @IBOutlet weak var feedbackBtn: UIButton!
     @IBOutlet weak var setupBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
+    
+    //头像
+    @IBOutlet weak var leftIconImage: UIImageView!
+    
+    //姓名
+    @IBOutlet weak var leftStuName: UILabel!
+    //账号
+    @IBOutlet weak var leftAccount: UILabel!
+    
+    //班级
+    @IBOutlet weak var leftClass: UILabel!
+    
+    //学校
+    @IBOutlet weak var leftSchool: UILabel!
+    
+    //表现分
+    @IBOutlet weak var leftScore: UILabel!
+    
+    //表现状况
+    @IBOutlet weak var leftImageBgView: UIView!
+    
+    //获得保存的属性
+    let userinfo = UserDefaults.standard.object(forKey: userInfoKey) as! NSDictionary
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,18 +53,82 @@ class HSLeftViewController: UIViewController {
     }
     //MARK:设置UI
     func setupUI() {
+        //MARK:上方的蓝色背景视图
+       
         //蓝色背景视图
         var blueView = UIView()
         blueView = blueHeadView
         blueView.backgroundColor = UIColor.colorWithHex(hexColor: 0x009ee7)
         view.addSubview(blueView)
         
-        //头像
-        //姓名
+        //树状图背景
+        leftImageBgView.backgroundColor = UIColor.colorWithHex(hexColor: 0x09ee7)
+        blueView.addSubview(leftImageBgView)
         
+        //头像
+        leftIconImage.layer.cornerRadius = leftIconImage.frame.size.width/2
+        leftIconImage.layer.masksToBounds = true
+        
+        leftIconImage.layer.borderWidth = 2
+        let borderWithColor = UIColor.white.cgColor
+        leftIconImage.layer.borderColor = borderWithColor
+        
+        //MARK:赋值信息参数
+        //获取图片的加密字符串
+        if let base64Str = userinfo["studentphoto"] as? String,
+            //将加密字符串转换为二进制
+            let imageData = Data(base64Encoded: base64Str, options: Data.Base64DecodingOptions.ignoreUnknownCharacters){
+            //给头像赋值
+            leftIconImage.image = UIImage(data: imageData)
+        }
+        //名字
+        let studentName = userinfo["studentName"] as? String
+        leftStuName.text = "\(studentName ?? "") 家长"
+        //账号
+        leftAccount.text = userinfo["studentNum"] as? String
+        //班级
+        leftClass.text = userinfo["classname"] as? String
+        //学校
+        leftSchool.text = userinfo["schoolname"] as? String
+        //分数
+        leftScore.text = userinfo["studentScore"] as? String
+        
+        let score = Int(leftScore.text ?? "") ?? 0
+        var scoreRange = 0
+        //使用switch给分数的树状图赋值
+        switch score {
+        case 0 ..< 10:
+            scoreRange = 0
+        case 10 ..< 50:
+            scoreRange = 1
+        case 50 ..< 150:
+            scoreRange = 2
+        case 150 ..< 350:
+            scoreRange = 3
+        case 350 ..< 850:
+            scoreRange = 4
+        default:
+            scoreRange = 5
+        }
+        //循环添加
+        for item in 1 ... 5 {
+            //初始化一张图片
+            var imageName = ""
+            if item <= scoreRange {
+                imageName = "jujube\(item)_light"
+            }else {
+                imageName = "jujube\(item)_dark"
+            }
+            let imageView = UIImageView(image: UIImage(named: imageName))
+            //添加到背景视图
+            leftImageBgView.addSubview(imageView)
+        }
+        
+        
+        
+        //MARK:设置下边的按钮
         //课表
         scheduleBtn.tag = 100
-        scheduleBtn.setBackgroundImage(nil, for: .highlighted)
         scheduleBtn.addTarget(self, action: #selector(btnClicked(sender:)), for: .touchUpInside)
         //关于我们
         aboutUsBtn.tag = 101
@@ -95,6 +184,7 @@ class HSLeftViewController: UIViewController {
 
             let naviVC = HSNavigationController(rootViewController: feedbackVC)
             present(naviVC, animated: true, completion: nil)
+            
         case 103:
             let setupVC = HSSetUpViewController()
             let image = UIImage(named: "leftBtnBullets")?.withRenderingMode(.alwaysOriginal)
@@ -113,10 +203,27 @@ class HSLeftViewController: UIViewController {
         default:
             break
         }
+        //将颜色转换为图片
+        sender.setBackgroundImage(UIImage.image(withColor: UIColor(white: 0.9, alpha: 1.0)), for: .highlighted)
     }
     
     //课表等界面退出的监听事件
     func clickedBack() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    //树状图的分布
+    override func viewDidAppear(_ animated: Bool) {
+        //计算平均间距
+        let magin = leftImageBgView.frame.width/5
+        print(leftImageBgView.frame.width)
+        //获得背景视图的高度
+        let bottomY = leftImageBgView.frame.height
+        print(leftImageBgView.subviews)
+        for (i,v) in leftImageBgView.subviews.enumerated() {
+            v.center = CGPoint(x: magin/2 + CGFloat(i)*magin, y: bottomY - v.frame.height/2)
+        }
+        
+        
     }
 }
