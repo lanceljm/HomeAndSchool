@@ -174,16 +174,16 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_us" translatesAutoresizingMaskIntoConstraints="NO" id="22N-5c-3LF">
-                                <rect key="frame" x="20" y="277" width="30" height="29"/>
+                                <rect key="frame" x="20" y="276" width="30" height="29"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback" translatesAutoresizingMaskIntoConstraints="NO" id="rVM-Q7-boZ">
-                                <rect key="frame" x="20" y="324" width="30" height="29"/>
+                                <rect key="frame" x="20" y="323" width="30" height="29"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setupImage" translatesAutoresizingMaskIntoConstraints="NO" id="fah-ht-xXC">
                                 <rect key="frame" x="20" y="370" width="30" height="29"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="log_out" translatesAutoresizingMaskIntoConstraints="NO" id="e1K-oB-L9l">
-                                <rect key="frame" x="20" y="418" width="30" height="29"/>
+                                <rect key="frame" x="20" y="417" width="30" height="29"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课程表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcc-u6-b7g">
                                 <rect key="frame" x="110" y="231" width="65" height="26"/>
@@ -503,6 +503,9 @@
                                 <state key="normal" title="提 交">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitBtn" destination="Pqe-ca-8B0" eventType="touchUpInside" id="DlK-J9-00e"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="textView" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-jr-ew4">
                                 <rect key="frame" x="0.0" y="145" width="375" height="200"/>
@@ -555,6 +558,7 @@
                         <outlet property="customLabel" destination="Vs4-aI-pER" id="5Qr-Xu-2hZ"/>
                         <outlet property="customTextBtn" destination="NiW-hJ-pG4" id="Akk-0I-9Nb"/>
                         <outlet property="customTextView" destination="jzN-jr-ew4" id="8OX-Um-SYH"/>
+                        <outlet property="customTitleTextfield" destination="Z7q-VX-mJv" id="1ba-ud-eI8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFz-wh-YpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -659,13 +663,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about_us" width="18" height="18"/>
-        <image name="boy" width="100" height="100"/>
+        <image name="about_us" width="36" height="36"/>
+        <image name="boy" width="200" height="200"/>
         <image name="class_exercise_nor" width="24" height="24"/>
-        <image name="feedback" width="18" height="14"/>
-        <image name="log_out" width="17" height="18"/>
+        <image name="feedback" width="36" height="28"/>
+        <image name="log_out" width="34" height="36"/>
         <image name="login_bg" width="360" height="640"/>
-        <image name="login_zao" width="239" height="258"/>
+        <image name="login_zao" width="479" height="517"/>
         <image name="logo1" width="29" height="29"/>
         <image name="removeall" width="32" height="32"/>
         <image name="settings_nor" width="40" height="40"/>

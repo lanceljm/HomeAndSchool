@@ -12,6 +12,8 @@ class HSFeedBackViewController: UIViewController {
 
     //删除按钮
     @IBOutlet weak var customTextBtn: UIButton!
+    //文本标题
+    @IBOutlet weak var customTitleTextfield: UITextField!
     //UITextView
     @IBOutlet weak var customTextView: UITextView!
     //自定义水印文字
@@ -39,6 +41,18 @@ class HSFeedBackViewController: UIViewController {
         customLabel.isHidden = false
         customTextBtn.isHidden = true
     }
+    
+    //提交按钮
+    @IBAction func submitBtn() {
+        //获取输入的内容
+        let title = customTitleTextfield.text
+        let content = customTextView.text
+        
+        
+        
+    }
+   
+    
 
 }
 
