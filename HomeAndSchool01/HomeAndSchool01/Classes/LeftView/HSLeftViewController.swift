@@ -149,6 +149,8 @@ class HSLeftViewController: UIViewController {
     func btnClicked(sender:UIButton) {
         switch sender.tag {
         case 100:
+            present(HSScheduleViewController(), animated: true, completion: nil)
+            /*
            let scheduleVC = HSScheduleViewController()
            //返回按钮的图片
            //渲染图片
@@ -164,7 +166,11 @@ class HSLeftViewController: UIViewController {
            let naviVC = HSNavigationController(rootViewController: scheduleVC)
            //使用模态推送
             present(naviVC, animated: true, completion: nil)
+            */
         case 101:
+            let aboutUsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HSAboutUsViewController")
+            present(aboutUsVC, animated: true, completion: nil)
+            /*
             let aboutusVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HSAboutUsViewController")
             let image = UIImage(named: "leftBtnBullets")?.withRenderingMode(.alwaysOriginal)
             let leftBtnImage = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(clickedBack))
@@ -173,9 +179,12 @@ class HSLeftViewController: UIViewController {
             aboutusVC.navigationItem.leftBarButtonItems = [leftBtnImage,leftBtnTitle]
             let  naviVC = HSNavigationController(rootViewController: aboutusVC)
             present(naviVC, animated: true, completion: nil)
-            
+            */
         case 102:
             let feedbackVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HSFeedBackViewController")
+            present(feedbackVC, animated: true, completion: nil)
+            
+            /*
             let image = UIImage(named: "leftBtnBullets")?.withRenderingMode(.alwaysOriginal)
             let leftBtnImage = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(clickedBack))
             let leftBtnTitle = UIBarButtonItem(title: "意见反馈", style: .plain, target: self, action: #selector(clickedBack))
@@ -183,9 +192,11 @@ class HSLeftViewController: UIViewController {
             feedbackVC.navigationItem.leftBarButtonItems = [leftBtnImage,leftBtnTitle]
 
             let naviVC = HSNavigationController(rootViewController: feedbackVC)
-            present(naviVC, animated: true, completion: nil)
+             */
             
         case 103:
+            present(HSSetUpViewController(), animated: true, completion: nil)
+            /*
             let setupVC = HSSetUpViewController()
             let image = UIImage(named: "leftBtnBullets")?.withRenderingMode(.alwaysOriginal)
             let leftBtnImage = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(clickedBack))
@@ -194,7 +205,7 @@ class HSLeftViewController: UIViewController {
             setupVC.navigationItem.leftBarButtonItems = [leftBtnImage,leftBtnTitle]
             let naviVC = HSNavigationController(rootViewController: setupVC)
             present(naviVC, animated: true, completion: nil)
-            
+            */
         case 104:
 //            let loginVC = HSLoginController()
             break

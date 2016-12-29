@@ -133,7 +133,7 @@ class HSLoginController: UIViewController {
         activity.startAnimating()
         
         //获得网络接口
-        let urlString = "zao/interface/" + "ZH-schoolname-S-login"
+        let urlString = "ZH-schoolname-S-login"
         //设置参数
         let parm = ["code":accountTF.text!,"password":passwordTF.text!]
         

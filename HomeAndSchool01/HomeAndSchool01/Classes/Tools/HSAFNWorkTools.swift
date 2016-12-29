@@ -25,8 +25,10 @@ class HSAFNWorkTools: AFHTTPSessionManager {
     
     //MARK:封装网络方法
     func request(url:String,parameters:Any?,finished:@escaping callBackBlock) {
+        //拼接地址
+        let newURL = "zao/interface/" + url
         //调用三方网络请求数据
-        get(url, parameters: parameters, progress: nil, success: { (_, data) in
+        get(newURL, parameters: parameters, progress: nil, success: { (_, data) in
             finished(data, nil)
         }) { (_, err) in
             finished(nil, err)

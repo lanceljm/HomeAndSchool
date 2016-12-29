@@ -22,3 +22,13 @@ let userInfoKey = "UserInfo"
 var baseURLString:String? {
     return UserDefaults.standard.object(forKey: IPSaveKey) as? String
 }
+
+//获取学生信息字典
+var userInfo:NSDictionary {
+    return UserDefaults.standard.object(forKey: userInfoKey) as! NSDictionary
+}
+
+//获取学生的主键ID
+var userID:String {
+    return userInfo["id"] as! String
+}

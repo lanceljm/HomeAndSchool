@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A231E641E13BC7E0023EF02 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A231E631E13BC7E0023EF02 /* UILabel+extension.swift */; };
+		1A231E681E13E4BA0023EF02 /* HSScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A231E671E13E4BA0023EF02 /* HSScheduleModel.swift */; };
+		1A231E6A1E13E4F90023EF02 /* HSScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A231E691E13E4F90023EF02 /* HSScheduleCell.swift */; };
 		1AA288751E12BD8F001902D9 /* UIImage+WithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA288741E12BD8F001902D9 /* UIImage+WithColor.swift */; };
 		1AB16AA01E0E56B300972AFF /* HSScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16A9F1E0E56B300972AFF /* HSScheduleViewController.swift */; };
 		1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A231E631E13BC7E0023EF02 /* UILabel+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
+		1A231E671E13E4BA0023EF02 /* HSScheduleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScheduleModel.swift; sourceTree = "<group>"; };
+		1A231E691E13E4F90023EF02 /* HSScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScheduleCell.swift; sourceTree = "<group>"; };
 		1AA288741E12BD8F001902D9 /* UIImage+WithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+WithColor.swift"; sourceTree = "<group>"; };
 		1AB16A9F1E0E56B300972AFF /* HSScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScheduleViewController.swift; sourceTree = "<group>"; };
 		1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSAboutUsViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				1AE9C6201E0D160D0036F9E3 /* HSCommonFile.swift */,
 				1AE9C6221E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift */,
 				1AA288741E12BD8F001902D9 /* UIImage+WithColor.swift */,
+				1A231E631E13BC7E0023EF02 /* UILabel+extension.swift */,
 			);
 			path = HSCommon;
 			sourceTree = "<group>";
@@ -162,6 +169,8 @@
 				1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */,
 				1AB16AA31E0E56E200972AFF /* HSFeedBackViewController.swift */,
 				1AB16AA51E0E573400972AFF /* HSSetUpViewController.swift */,
+				1A231E691E13E4F90023EF02 /* HSScheduleCell.swift */,
+				1A231E671E13E4BA0023EF02 /* HSScheduleModel.swift */,
 			);
 			path = LeftView;
 			sourceTree = "<group>";
@@ -351,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A231E6A1E13E4F90023EF02 /* HSScheduleCell.swift in Sources */,
 				1AE9C5C31E0BEF9D0036F9E3 /* HSMessageController.swift in Sources */,
 				1AE9C5BF1E0BEF2D0036F9E3 /* HSLoginController.swift in Sources */,
 				1AE9C5C51E0BEFB10036F9E3 /* HSHomeworkController.swift in Sources */,
@@ -371,6 +381,8 @@
 				1AE9C5C91E0BEFD30036F9E3 /* HSExaminationController.swift in Sources */,
 				1AE9C5A11E0BEAF70036F9E3 /* AppDelegate.swift in Sources */,
 				1AE9C6251E0D1E340036F9E3 /* HSDrawerController.swift in Sources */,
+				1A231E681E13E4BA0023EF02 /* HSScheduleModel.swift in Sources */,
+				1A231E641E13BC7E0023EF02 /* UILabel+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
