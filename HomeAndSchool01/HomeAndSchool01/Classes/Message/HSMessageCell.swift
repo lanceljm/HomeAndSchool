@@ -29,24 +29,27 @@ class HSMessageCell: UITableViewCell {
     //点赞
     @IBOutlet weak var messageBtn: UIButton!
     
-    @IBOutlet weak var messageReplyView: UIView!
+    @IBOutlet weak var messageReplyView: HSReplayListView!
     
     
     //接收数据的模型
-    var message:HSMessageModel? {
+    var messageVM:HSMessageViewModel? {
         didSet {
-            messageNameLabel.text = message?.not_Name
-            messageDateLabel.text = message?.not_createDate
-            messageTitleLabel.text = message?.not_title
-            messageContentLagel.text = message?.not_content
+            messageNameLabel.text = messageVM?.message.not_Name
+            messageDateLabel.text = messageVM?.message.not_createDate
+            messageTitleLabel.text = messageVM?.message.not_title
+            messageContentLagel.text = messageVM?.message.not_content
             
             //设置点赞数和显示高亮状态
-            if (message?.likenum)! > 0 {
+            if (messageVM?.message.likenum)! > 0 {
                 messageBtn.isSelected = true
-                messageBtn.setTitle("\(message?.likenum ?? 0)", for: .selected)
+                messageBtn.setTitle("\(messageVM?.message.likenum ?? 0)", for: .selected)
             }else {
                 messageBtn.isSelected = false
             }
+            
+            //传递数据给回复视图
+            messageReplyView.messageVM = messageVM
         }
     }
     

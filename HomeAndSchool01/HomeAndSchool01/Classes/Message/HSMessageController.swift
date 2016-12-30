@@ -19,7 +19,7 @@ class HSMessageController: UITableViewController {
         //注册
         tableView.register(UINib.init(nibName: "HSMessageCell", bundle: nil), forCellReuseIdentifier: "messageCell")
 
-        tableView.estimatedRowHeight = 350
+        tableView.estimatedRowHeight = 500
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
         
@@ -51,14 +51,14 @@ extension HSMessageController {
         cell.selectionStyle = .none
         
         let messageM = messagListModel.messageModels[indexPath.row]
-        cell.message = messageM
+        cell.messageVM = messageM
         
         //处理相应cell对应的事件
         cell.likeBtnBlock = {(clickcell) in
-            print("点赞",clickcell.message?.not_title ?? "")
+            
         }
         cell.replyBtnBlock = {(clickcell) in
-            print("回复",clickcell.message?.not_title ?? "")
+            
         }
         
         return cell

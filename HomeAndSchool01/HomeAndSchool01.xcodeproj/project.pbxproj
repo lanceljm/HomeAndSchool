@@ -40,6 +40,9 @@
 		1AF28B131E15100E0000E57D /* HSMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B121E15100E0000E57D /* HSMessageModel.swift */; };
 		1AF28B151E1510330000E57D /* HSMessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B141E1510330000E57D /* HSMessageListViewModel.swift */; };
 		1AF28B171E1576E90000E57D /* HSReleaseInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B161E1576E90000E57D /* HSReleaseInfoController.swift */; };
+		1AF28B1F1E1640670000E57D /* HSReplayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B1E1E1640670000E57D /* HSReplayListView.swift */; };
+		1AF28B211E16419F0000E57D /* HSReplayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B201E16419F0000E57D /* HSReplayListModel.swift */; };
+		1AF28B231E1643D70000E57D /* HSMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B221E1643D70000E57D /* HSMessageViewModel.swift */; };
 		F884E713593D551B355B46AD /* Pods_HomeAndSchool01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,9 @@
 		1AF28B121E15100E0000E57D /* HSMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMessageModel.swift; sourceTree = "<group>"; };
 		1AF28B141E1510330000E57D /* HSMessageListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMessageListViewModel.swift; sourceTree = "<group>"; };
 		1AF28B161E1576E90000E57D /* HSReleaseInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSReleaseInfoController.swift; sourceTree = "<group>"; };
+		1AF28B1E1E1640670000E57D /* HSReplayListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSReplayListView.swift; sourceTree = "<group>"; };
+		1AF28B201E16419F0000E57D /* HSReplayListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSReplayListModel.swift; sourceTree = "<group>"; };
+		1AF28B221E1643D70000E57D /* HSMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMessageViewModel.swift; sourceTree = "<group>"; };
 		B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeAndSchool01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68F51CB9438098C149599A7 /* Pods-HomeAndSchool01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.release.xcconfig"; sourceTree = "<group>"; };
 		F158E030843FCFA3E07AC947 /* Pods-HomeAndSchool01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,9 +215,9 @@
 		1AE9C5BB1E0BECCD0036F9E3 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				1AF28B0C1E150E5D0000E57D /* VC */,
+				1AF28B0C1E150E5D0000E57D /* VM */,
 				1AF28B0B1E150E4C0000E57D /* M */,
-				1AF28B0A1E150E3C0000E57D /* VM */,
+				1AF28B0A1E150E3C0000E57D /* VC */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -232,31 +238,34 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		1AF28B0A1E150E3C0000E57D /* VM */ = {
+		1AF28B0A1E150E3C0000E57D /* VC */ = {
 			isa = PBXGroup;
 			children = (
 				1AE9C5C21E0BEF9D0036F9E3 /* HSMessageController.swift */,
 				1AF28B0D1E150FB90000E57D /* HSMessageCell.swift */,
 				1AF28B0E1E150FB90000E57D /* HSMessageCell.xib */,
 				1AF28B161E1576E90000E57D /* HSReleaseInfoController.swift */,
+				1AF28B1E1E1640670000E57D /* HSReplayListView.swift */,
 			);
-			name = VM;
+			name = VC;
 			sourceTree = "<group>";
 		};
 		1AF28B0B1E150E4C0000E57D /* M */ = {
 			isa = PBXGroup;
 			children = (
 				1AF28B121E15100E0000E57D /* HSMessageModel.swift */,
+				1AF28B201E16419F0000E57D /* HSReplayListModel.swift */,
 			);
 			name = M;
 			sourceTree = "<group>";
 		};
-		1AF28B0C1E150E5D0000E57D /* VC */ = {
+		1AF28B0C1E150E5D0000E57D /* VM */ = {
 			isa = PBXGroup;
 			children = (
 				1AF28B141E1510330000E57D /* HSMessageListViewModel.swift */,
+				1AF28B221E1643D70000E57D /* HSMessageViewModel.swift */,
 			);
-			name = VC;
+			name = VM;
 			sourceTree = "<group>";
 		};
 		3834A40EC884D00162C3DB66 /* Pods */ = {
@@ -404,10 +413,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A231E6A1E13E4F90023EF02 /* HSScheduleCell.swift in Sources */,
+				1AF28B231E1643D70000E57D /* HSMessageViewModel.swift in Sources */,
 				1AE9C5C31E0BEF9D0036F9E3 /* HSMessageController.swift in Sources */,
 				1AE9C5BF1E0BEF2D0036F9E3 /* HSLoginController.swift in Sources */,
 				1AE9C5C51E0BEFB10036F9E3 /* HSHomeworkController.swift in Sources */,
 				1AE9C5CD1E0BF2230036F9E3 /* UIColor+Extension.swift in Sources */,
+				1AF28B1F1E1640670000E57D /* HSReplayListView.swift in Sources */,
 				1AE9C5CB1E0BF2050036F9E3 /* Bundle+Extension.swift in Sources */,
 				1AA288751E12BD8F001902D9 /* UIImage+WithColor.swift in Sources */,
 				1ADE365D1E113DF3001609DE /* HSAFNWorkTools.swift in Sources */,
@@ -425,6 +436,7 @@
 				1AB16AA41E0E56E200972AFF /* HSFeedBackViewController.swift in Sources */,
 				1AE9C61F1E0D14630036F9E3 /* HSLeftViewController.swift in Sources */,
 				1AF28B131E15100E0000E57D /* HSMessageModel.swift in Sources */,
+				1AF28B211E16419F0000E57D /* HSReplayListModel.swift in Sources */,
 				1AE9C5C91E0BEFD30036F9E3 /* HSExaminationController.swift in Sources */,
 				1AE9C5A11E0BEAF70036F9E3 /* AppDelegate.swift in Sources */,
 				1AF28B171E1576E90000E57D /* HSReleaseInfoController.swift in Sources */,

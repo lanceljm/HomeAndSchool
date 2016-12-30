@@ -227,10 +227,9 @@ class HSLeftViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         //计算平均间距
         let magin = leftImageBgView.frame.width/5
-        print(leftImageBgView.frame.width)
         //获得背景视图的高度
         let bottomY = leftImageBgView.frame.height
-        print(leftImageBgView.subviews)
+       
         for (i,v) in leftImageBgView.subviews.enumerated() {
             v.center = CGPoint(x: magin/2 + CGFloat(i)*magin, y: bottomY - v.frame.height/2)
         }

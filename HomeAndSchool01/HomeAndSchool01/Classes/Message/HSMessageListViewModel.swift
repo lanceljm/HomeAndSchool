@@ -8,10 +8,10 @@
 
 import UIKit
 
-class HSMessageListViewModel: NSObject {
+class HSMessageListViewModel {
 
     //数据源数组，存放消息模型
-    var messageModels:[HSMessageModel] = []
+    var messageModels:[HSMessageViewModel] = []
     
     //加载数据
     func loadDate(finished:@escaping ((_ isRefresh:Bool) -> ())) {
@@ -35,8 +35,26 @@ class HSMessageListViewModel: NSObject {
                 for dict in dictArr {
                     //字典转模型
                     let messageM = HSMessageModel(dict: dict)
-                    //添加到数组
-                    self?.messageModels.append(messageM)
+                    
+                    //获得回复列表的字典数组
+                    let replayListDA = messageM.replaylist as! [[String:Any]]
+                    
+                    
+                    //赋值列表模型数组
+                    var replayListMArr = [HSReplayListModel]()
+                    for dic in replayListDA {
+                        let releaseM = HSReplayListModel(dict: dic)
+                        //添加到数组中
+                        replayListMArr.append(releaseM)
+                    }
+                    
+                    //MARK:将转换好的回复列表模型数组赋值给消息模型属性
+                    messageM.replaylist = replayListMArr
+                    
+                    
+                    
+                    //添加到数组--消息模型属性
+                    self?.messageModels.append(HSMessageViewModel(model: messageM))
                 }
                 //是否加载数据
                 finished(true)

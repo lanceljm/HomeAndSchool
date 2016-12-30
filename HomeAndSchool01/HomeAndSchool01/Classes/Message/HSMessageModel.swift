@@ -22,7 +22,7 @@ class HSMessageModel: NSObject {
     var not_title:String?
     var not_tpath:String?
     var not_type:Int = 0
-    var replaylist:NSArray?
+    var replaylist:[Any]?
     
     
     init(dict:[String:Any]) {
