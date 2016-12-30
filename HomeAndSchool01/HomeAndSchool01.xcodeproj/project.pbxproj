@@ -34,6 +34,12 @@
 		1AE9C6211E0D160D0036F9E3 /* HSCommonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C6201E0D160D0036F9E3 /* HSCommonFile.swift */; };
 		1AE9C6231E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C6221E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift */; };
 		1AE9C6251E0D1E340036F9E3 /* HSDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9C6241E0D1E340036F9E3 /* HSDrawerController.swift */; };
+		1AF28B091E14F40C0000E57D /* HSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B081E14F40C0000E57D /* HSAlertView.swift */; };
+		1AF28B0F1E150FB90000E57D /* HSMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B0D1E150FB90000E57D /* HSMessageCell.swift */; };
+		1AF28B101E150FB90000E57D /* HSMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF28B0E1E150FB90000E57D /* HSMessageCell.xib */; };
+		1AF28B131E15100E0000E57D /* HSMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B121E15100E0000E57D /* HSMessageModel.swift */; };
+		1AF28B151E1510330000E57D /* HSMessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B141E1510330000E57D /* HSMessageListViewModel.swift */; };
+		1AF28B171E1576E90000E57D /* HSReleaseInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B161E1576E90000E57D /* HSReleaseInfoController.swift */; };
 		F884E713593D551B355B46AD /* Pods_HomeAndSchool01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +73,12 @@
 		1AE9C6201E0D160D0036F9E3 /* HSCommonFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSCommonFile.swift; sourceTree = "<group>"; };
 		1AE9C6221E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarbuttomItem+Extension.swift"; sourceTree = "<group>"; };
 		1AE9C6241E0D1E340036F9E3 /* HSDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSDrawerController.swift; sourceTree = "<group>"; };
+		1AF28B081E14F40C0000E57D /* HSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSAlertView.swift; sourceTree = "<group>"; };
+		1AF28B0D1E150FB90000E57D /* HSMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMessageCell.swift; sourceTree = "<group>"; };
+		1AF28B0E1E150FB90000E57D /* HSMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSMessageCell.xib; sourceTree = "<group>"; };
+		1AF28B121E15100E0000E57D /* HSMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMessageModel.swift; sourceTree = "<group>"; };
+		1AF28B141E1510330000E57D /* HSMessageListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMessageListViewModel.swift; sourceTree = "<group>"; };
+		1AF28B161E1576E90000E57D /* HSReleaseInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSReleaseInfoController.swift; sourceTree = "<group>"; };
 		B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeAndSchool01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68F51CB9438098C149599A7 /* Pods-HomeAndSchool01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.release.xcconfig"; sourceTree = "<group>"; };
 		F158E030843FCFA3E07AC947 /* Pods-HomeAndSchool01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +169,7 @@
 				1AE9C6221E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift */,
 				1AA288741E12BD8F001902D9 /* UIImage+WithColor.swift */,
 				1A231E631E13BC7E0023EF02 /* UILabel+extension.swift */,
+				1AF28B081E14F40C0000E57D /* HSAlertView.swift */,
 			);
 			path = HSCommon;
 			sourceTree = "<group>";
@@ -196,7 +209,9 @@
 		1AE9C5BB1E0BECCD0036F9E3 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				1AE9C5C21E0BEF9D0036F9E3 /* HSMessageController.swift */,
+				1AF28B0C1E150E5D0000E57D /* VC */,
+				1AF28B0B1E150E4C0000E57D /* M */,
+				1AF28B0A1E150E3C0000E57D /* VM */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -215,6 +230,33 @@
 				1ADE365C1E113DF3001609DE /* HSAFNWorkTools.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		1AF28B0A1E150E3C0000E57D /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				1AE9C5C21E0BEF9D0036F9E3 /* HSMessageController.swift */,
+				1AF28B0D1E150FB90000E57D /* HSMessageCell.swift */,
+				1AF28B0E1E150FB90000E57D /* HSMessageCell.xib */,
+				1AF28B161E1576E90000E57D /* HSReleaseInfoController.swift */,
+			);
+			name = VM;
+			sourceTree = "<group>";
+		};
+		1AF28B0B1E150E4C0000E57D /* M */ = {
+			isa = PBXGroup;
+			children = (
+				1AF28B121E15100E0000E57D /* HSMessageModel.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		1AF28B0C1E150E5D0000E57D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1AF28B141E1510330000E57D /* HSMessageListViewModel.swift */,
+			);
+			name = VC;
 			sourceTree = "<group>";
 		};
 		3834A40EC884D00162C3DB66 /* Pods */ = {
@@ -298,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF28B101E150FB90000E57D /* HSMessageCell.xib in Resources */,
 				1AE9C5AB1E0BEAF70036F9E3 /* LaunchScreen.storyboard in Resources */,
 				1AE9C5A81E0BEAF70036F9E3 /* Assets.xcassets in Resources */,
 				1AE9C5A61E0BEAF70036F9E3 /* Main.storyboard in Resources */,
@@ -370,16 +413,21 @@
 				1ADE365D1E113DF3001609DE /* HSAFNWorkTools.swift in Sources */,
 				1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */,
 				1AE9C6211E0D160D0036F9E3 /* HSCommonFile.swift in Sources */,
+				1AF28B091E14F40C0000E57D /* HSAlertView.swift in Sources */,
 				1AB16AA01E0E56B300972AFF /* HSScheduleViewController.swift in Sources */,
 				1AE9C5C11E0BEF5D0036F9E3 /* HSTabBarController.swift in Sources */,
+				1AF28B0F1E150FB90000E57D /* HSMessageCell.swift in Sources */,
+				1AF28B151E1510330000E57D /* HSMessageListViewModel.swift in Sources */,
 				1AE9C61D1E0D12EC0036F9E3 /* HSNavigationController.swift in Sources */,
 				1AE9C5C71E0BEFC40036F9E3 /* HSClassroomController.swift in Sources */,
 				1AB16AA61E0E573400972AFF /* HSSetUpViewController.swift in Sources */,
 				1AE9C6231E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift in Sources */,
 				1AB16AA41E0E56E200972AFF /* HSFeedBackViewController.swift in Sources */,
 				1AE9C61F1E0D14630036F9E3 /* HSLeftViewController.swift in Sources */,
+				1AF28B131E15100E0000E57D /* HSMessageModel.swift in Sources */,
 				1AE9C5C91E0BEFD30036F9E3 /* HSExaminationController.swift in Sources */,
 				1AE9C5A11E0BEAF70036F9E3 /* AppDelegate.swift in Sources */,
+				1AF28B171E1576E90000E57D /* HSReleaseInfoController.swift in Sources */,
 				1AE9C6251E0D1E340036F9E3 /* HSDrawerController.swift in Sources */,
 				1A231E681E13E4BA0023EF02 /* HSScheduleModel.swift in Sources */,
 				1A231E641E13BC7E0023EF02 /* UILabel+extension.swift in Sources */,

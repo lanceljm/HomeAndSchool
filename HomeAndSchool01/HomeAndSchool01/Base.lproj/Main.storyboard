@@ -504,7 +504,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitBtn" destination="Pqe-ca-8B0" eventType="touchUpInside" id="DlK-J9-00e"/>
+                                    <action selector="submitBtnClicked" destination="Pqe-ca-8B0" eventType="touchUpInside" id="HxF-Tf-rPH"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="textView" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-jr-ew4">
@@ -531,7 +531,7 @@
                                     <constraint firstAttribute="width" constant="20" id="XSc-rV-WPW"/>
                                     <constraint firstAttribute="height" constant="20" id="kz2-XY-cRm"/>
                                 </constraints>
-                                <state key="normal" title="Button" backgroundImage="removeall"/>
+                                <state key="normal" title="Button" backgroundImage="清除"/>
                                 <connections>
                                     <action selector="customTextViewBtn:" destination="Pqe-ca-8B0" eventType="touchUpInside" id="xtn-TC-zP8"/>
                                 </connections>
@@ -559,11 +559,108 @@
                         <outlet property="customTextBtn" destination="NiW-hJ-pG4" id="Akk-0I-9Nb"/>
                         <outlet property="customTextView" destination="jzN-jr-ew4" id="8OX-Um-SYH"/>
                         <outlet property="customTitleTextfield" destination="Z7q-VX-mJv" id="1ba-ud-eI8"/>
+                        <outlet property="submitBtn" destination="tpa-lD-tFD" id="odR-6l-Eyt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFz-wh-YpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3113" y="118"/>
+        </scene>
+        <!--Release Info Controller-->
+        <scene sceneID="WH3-2E-q9b">
+            <objects>
+                <viewController storyboardIdentifier="HSReleaseInfoController" id="ihd-Cx-02J" customClass="HSReleaseInfoController" customModule="HomeAndSchool01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YMQ-Rt-SHS"/>
+                        <viewControllerLayoutGuide type="bottom" id="BMO-ok-bqN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Kh-TU-GDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入标题：" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXI-1n-Njf">
+                                <rect key="frame" x="0.0" y="84" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dwg-MJ-oXn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="textView" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="QeH-vk-CXv">
+                                <rect key="frame" x="0.0" y="143" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3Fb-cu-tmu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入您宝贵的意见，帮助我们做的更好！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPN-va-qpv">
+                                <rect key="frame" x="0.0" y="149" width="340" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3cK-6y-Lpq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-n3-irT">
+                                <rect key="frame" x="347" y="154" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="muS-nP-XNU"/>
+                                    <constraint firstAttribute="width" constant="20" id="tQp-UH-W8h"/>
+                                </constraints>
+                                <state key="normal" title="Button" backgroundImage="清除"/>
+                                <connections>
+                                    <action selector="removeBtnClicked:" destination="ihd-Cx-02J" eventType="touchUpInside" id="rX3-Bd-Y4b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSm-WE-MbL">
+                                <rect key="frame" x="20" y="363" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9wo-pK-UwX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="提 交">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitBtnClicked:" destination="ihd-Cx-02J" eventType="touchUpInside" id="FYf-nd-1ZU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KBQ-n3-irT" secondAttribute="trailing" constant="8" id="2jI-62-9g8"/>
+                            <constraint firstAttribute="trailing" secondItem="uPN-va-qpv" secondAttribute="trailing" constant="35" id="LIB-7a-tRg"/>
+                            <constraint firstItem="QeH-vk-CXv" firstAttribute="top" secondItem="cXI-1n-Njf" secondAttribute="bottom" constant="9" id="OAK-MK-nFh"/>
+                            <constraint firstAttribute="trailing" secondItem="QeH-vk-CXv" secondAttribute="trailing" id="Q9g-Be-1lk"/>
+                            <constraint firstItem="cXI-1n-Njf" firstAttribute="leading" secondItem="9Kh-TU-GDZ" secondAttribute="leading" id="YnI-eY-H8I"/>
+                            <constraint firstAttribute="trailing" secondItem="cXI-1n-Njf" secondAttribute="trailing" id="afJ-Ep-fy3"/>
+                            <constraint firstItem="eSm-WE-MbL" firstAttribute="top" secondItem="QeH-vk-CXv" secondAttribute="bottom" constant="20" id="cKn-Nc-RY5"/>
+                            <constraint firstItem="uPN-va-qpv" firstAttribute="top" secondItem="cXI-1n-Njf" secondAttribute="bottom" constant="15" id="fK3-2b-zRo"/>
+                            <constraint firstItem="QeH-vk-CXv" firstAttribute="leading" secondItem="9Kh-TU-GDZ" secondAttribute="leading" id="fNZ-PX-fko"/>
+                            <constraint firstItem="uPN-va-qpv" firstAttribute="leading" secondItem="9Kh-TU-GDZ" secondAttribute="leading" id="hg0-7s-3Zf"/>
+                            <constraint firstItem="eSm-WE-MbL" firstAttribute="leading" secondItem="9Kh-TU-GDZ" secondAttribute="leading" constant="20" id="kwV-AS-sQq"/>
+                            <constraint firstItem="cXI-1n-Njf" firstAttribute="top" secondItem="YMQ-Rt-SHS" secondAttribute="bottom" constant="64" id="lQn-Ho-4MC"/>
+                            <constraint firstItem="KBQ-n3-irT" firstAttribute="centerY" secondItem="uPN-va-qpv" secondAttribute="centerY" id="nbC-eh-ZNt"/>
+                            <constraint firstAttribute="trailing" secondItem="eSm-WE-MbL" secondAttribute="trailing" constant="20" id="sBi-bD-3bH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customPlacerLabel" destination="uPN-va-qpv" id="3GU-NQ-GpR"/>
+                        <outlet property="customRemoveAllBtn" destination="KBQ-n3-irT" id="EE6-Id-fqJ"/>
+                        <outlet property="customSubmitBtn" destination="eSm-WE-MbL" id="YHa-FK-qH1"/>
+                        <outlet property="customTextView" destination="QeH-vk-CXv" id="yso-0G-Exa"/>
+                        <outlet property="customTitleTF" destination="cXI-1n-Njf" id="U5D-0J-tov"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DgM-a6-8GZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3842" y="121"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="8bv-02-sIs">
@@ -671,9 +768,9 @@
         <image name="login_bg" width="360" height="640"/>
         <image name="login_zao" width="479" height="517"/>
         <image name="logo1" width="29" height="29"/>
-        <image name="removeall" width="32" height="32"/>
         <image name="settings_nor" width="40" height="40"/>
         <image name="settings_press" width="40" height="40"/>
         <image name="setupImage" width="34" height="36"/>
+        <image name="清除" width="60" height="60"/>
     </resources>
 </document>

@@ -18,69 +18,84 @@ class HSFeedBackViewController: UIViewController {
     @IBOutlet weak var customTextView: UITextView!
     //自定义水印文字
     @IBOutlet weak var customLabel: UILabel!
+    //提价按钮
+    @IBOutlet weak var submitBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNaviTopView()//设置导航条
-        customTextViewDelegate()
+        setupUI()
     
     }
-    //设置uiview相关的属性
-    func customTextViewDelegate() {
+    
+    func setupUI() {
         customTextView.delegate = self
+        customTextBtn.isHidden = true
         
-        customTextBtn.alpha = 0
-        if customTextView.text.isEmpty {
-            customLabel.alpha = 1.0
-        }
+        submitBtn.layer.cornerRadius = 5
+        submitBtn.layer.masksToBounds = true
     }
     //删除按钮的事件
     @IBAction func customTextViewBtn(_ sender: Any) {
-        customTextView.text = nil
+        customTextView.text = ""
         customLabel.isHidden = false
         customTextBtn.isHidden = true
     }
     
     //提交按钮
-    @IBAction func submitBtn() {
+    @IBAction func submitBtnClicked() {
         //获取输入的内容
         let title = customTitleTextfield.text
         let content = customTextView.text
         
+        if title == "" {
+            HSAlertView.bottomAlertView("标题不能为空")
+            return
+        }
         
+        if content == "" {
+            HSAlertView.bottomAlertView("上传内容不能为空")
+            return
+        }
         
+        //退出编辑模式
+        view.endEditing(true)
+        //MARK:上传信息
+        //获取发送接口
+        let urlString = "ZH-schoolname-S-submitJXOpinion"
+        //用户输入信息
+        let feedbackInfo = ["key":userID,"title":title!,"content":content!]
+        //发送消息
+        HSAFNWorkTools.shared.request(url: urlString, parameters: feedbackInfo) { (data, err) in
+            if err != nil {
+                HSAlertView.bottomAlertView("消息发送失败")
+                self.customLabel.isHidden = true
+            }else {
+                HSAlertView.bottomAlertView("消息发送成功")
+                self.customLabel.isHidden = false
+            }
+            self.customTextView.text = nil
+            self.customTitleTextfield.text = nil
+        }
+        customTextBtn.isHidden = true
     }
-   
     
-
+    
 }
 
+//MARK:遵守代理
 extension HSFeedBackViewController:UITextViewDelegate {
-    //开始编辑，隐藏label
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        customLabel.isHidden = true
-        return true
-    }
-    //编辑状态发生变化
+    //编辑状态发生改变
     func textViewDidChange(_ textView: UITextView) {
-        if customTextView.text != nil {
+        if customTextView.text != "" {
             customLabel.isHidden = true
             customTextBtn.isHidden = false
-            customTextBtn.alpha = 1.0
-            
-        }else{
+        }else {
             customLabel.isHidden = false
             customTextBtn.isHidden = true
-            customTextBtn.alpha = 0
         }
-    }
-
-    //结束编辑，显示label
-    func textViewDidEndEditing(_ textView: UITextView) {
-        customLabel.isHidden = false
-        customTextBtn.isHidden = false
-        customTextBtn.alpha = 1.0
     }
 }
 
