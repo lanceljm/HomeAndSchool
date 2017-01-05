@@ -6,5 +6,6 @@ target 'HomeAndSchool01' do
 pod 'AFNetworking'
     pod 'SnapKit'
     pod 'SVProgressHUD'
+    pod ‘MJRefresh’
 
 end

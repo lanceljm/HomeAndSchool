@@ -67,6 +67,8 @@ class HSTabBarController: UITabBarController {
     }
     
     func leftBtnClicked() {
+        UIApplication.shared.keyWindow?.endEditing(true)
+        
         //执行闭包，传递事件
         leftBtnClick?()
     }

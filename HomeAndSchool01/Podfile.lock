@@ -14,19 +14,22 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - MJRefresh (3.1.12)
   - SnapKit (3.1.2)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - MJRefresh
   - SnapKit
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 38b1cbb318f851e811c428ae3f7af846d66f3cb4
+PODFILE CHECKSUM: 4048fdb6b376a5549cc34d55fbbfa799ff47ea12
 
 COCOAPODS: 1.1.1

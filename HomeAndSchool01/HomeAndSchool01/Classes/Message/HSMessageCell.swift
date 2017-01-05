@@ -31,10 +31,22 @@ class HSMessageCell: UITableViewCell {
     
     @IBOutlet weak var messageReplyView: HSReplayListView!
     
+    @IBOutlet weak var messageRepalyListViewHeight:NSLayoutConstraint!
+    
     
     //接收数据的模型
     var messageVM:HSMessageViewModel? {
         didSet {
+            //头像
+            let path = messageVM?.message.not_tpath ?? ""
+            if path != "" {
+                let urlStr = "http://120.24.57.38/new/zao/" + path
+                //下载图片
+                messageIconV.setImageWith(URL(string:urlStr)!, placeholderImage: UIImage(named: "boy"))
+            }else {
+                messageIconV.image = UIImage(named: "boy")
+            }
+            
             messageNameLabel.text = messageVM?.message.not_Name
             messageDateLabel.text = messageVM?.message.not_createDate
             messageTitleLabel.text = messageVM?.message.not_title
@@ -50,6 +62,9 @@ class HSMessageCell: UITableViewCell {
             
             //传递数据给回复视图
             messageReplyView.messageVM = messageVM
+            
+            //更新视图高度
+            messageRepalyListViewHeight.constant = messageVM?.replayListViewHeight ?? 0
         }
     }
     
@@ -62,8 +77,8 @@ class HSMessageCell: UITableViewCell {
         
         messageUserTypeLabel.layer.cornerRadius = 8
         
-        messageIconV.layer.borderWidth = 1
-        messageIconV.layer.borderColor = UIColor.colorWithHex(hexColor: 0x00a0e9).cgColor
+        messageUserTypeLabel.layer.borderWidth = 1
+        messageUserTypeLabel.layer.borderColor = UIColor.colorWithHex(hexColor: 0x00a0e9).cgColor
     }
     
     //点赞

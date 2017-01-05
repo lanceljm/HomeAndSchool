@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0C1CDC1E1CDB0C006C907E /* HSHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C1CDB1E1CDB0C006C907E /* HSHomeDetailController.swift */; };
+		1A0C1CF11E1CE453006C907E /* HSHomeworkSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C1CEF1E1CE453006C907E /* HSHomeworkSubCell.swift */; };
+		1A0C1CF21E1CE453006C907E /* HSHomeworkSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A0C1CF01E1CE453006C907E /* HSHomeworkSubCell.xib */; };
+		1A0C1CF51E1CE46E006C907E /* HSHomeworkObjCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C1CF31E1CE46E006C907E /* HSHomeworkObjCell.swift */; };
+		1A0C1CF61E1CE46E006C907E /* HSHomeworkObjCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A0C1CF41E1CE46E006C907E /* HSHomeworkObjCell.xib */; };
+		1A0C1CF81E1CE4B0006C907E /* HSHomeworkObjModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C1CF71E1CE4B0006C907E /* HSHomeworkObjModel.swift */; };
+		1A0C1CFA1E1CE4C1006C907E /* HSHomeworkSubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C1CF91E1CE4C1006C907E /* HSHomeworkSubModel.swift */; };
+		1A0C1CFC1E1CE51B006C907E /* HSHomeworkObjViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C1CFB1E1CE51B006C907E /* HSHomeworkObjViewModel.swift */; };
+		1A0C1CFE1E1CE533006C907E /* HSHomeworkSubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C1CFD1E1CE533006C907E /* HSHomeworkSubViewModel.swift */; };
 		1A231E641E13BC7E0023EF02 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A231E631E13BC7E0023EF02 /* UILabel+extension.swift */; };
 		1A231E681E13E4BA0023EF02 /* HSScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A231E671E13E4BA0023EF02 /* HSScheduleModel.swift */; };
 		1A231E6A1E13E4F90023EF02 /* HSScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A231E691E13E4F90023EF02 /* HSScheduleCell.swift */; };
+		1A8837C01E1BB77D0053BD93 /* HSHomeWorkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8837BF1E1BB77D0053BD93 /* HSHomeWorkListViewModel.swift */; };
 		1AA288751E12BD8F001902D9 /* UIImage+WithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA288741E12BD8F001902D9 /* UIImage+WithColor.swift */; };
 		1AB16AA01E0E56B300972AFF /* HSScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16A9F1E0E56B300972AFF /* HSScheduleViewController.swift */; };
 		1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */; };
@@ -43,13 +53,34 @@
 		1AF28B1F1E1640670000E57D /* HSReplayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B1E1E1640670000E57D /* HSReplayListView.swift */; };
 		1AF28B211E16419F0000E57D /* HSReplayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B201E16419F0000E57D /* HSReplayListModel.swift */; };
 		1AF28B231E1643D70000E57D /* HSMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF28B221E1643D70000E57D /* HSMessageViewModel.swift */; };
+		1AF9BA971E1680AA008A6F1A /* HSHomeworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BA961E1680AA008A6F1A /* HSHomeworkModel.swift */; };
+		1AF9BA991E16C377008A6F1A /* HSClassroomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BA981E16C377008A6F1A /* HSClassroomModel.swift */; };
+		1AF9BA9B1E16C396008A6F1A /* HSScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BA9A1E16C396008A6F1A /* HSScoreModel.swift */; };
+		1AF9BAA41E16C93F008A6F1A /* HSHomeworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BAA21E16C93F008A6F1A /* HSHomeworkCell.swift */; };
+		1AF9BAA51E16C93F008A6F1A /* HSHomeworkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF9BAA31E16C93F008A6F1A /* HSHomeworkCell.xib */; };
+		1AF9BAA81E16C95D008A6F1A /* HSClassroomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BAA61E16C95D008A6F1A /* HSClassroomCell.swift */; };
+		1AF9BAA91E16C95D008A6F1A /* HSClassroomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF9BAA71E16C95D008A6F1A /* HSClassroomCell.xib */; };
+		1AF9BAAC1E16C976008A6F1A /* HSScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BAAA1E16C976008A6F1A /* HSScoreCell.swift */; };
+		1AF9BAAD1E16C976008A6F1A /* HSScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF9BAAB1E16C976008A6F1A /* HSScoreCell.xib */; };
+		1AF9BAB71E173E78008A6F1A /* HSClassroomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BAB61E173E78008A6F1A /* HSClassroomViewModel.swift */; };
+		1AF9BAB91E173EA5008A6F1A /* HSScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9BAB81E173EA5008A6F1A /* HSScoreViewModel.swift */; };
 		F884E713593D551B355B46AD /* Pods_HomeAndSchool01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0C1CDB1E1CDB0C006C907E /* HSHomeDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeDetailController.swift; sourceTree = "<group>"; };
+		1A0C1CEF1E1CE453006C907E /* HSHomeworkSubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkSubCell.swift; sourceTree = "<group>"; };
+		1A0C1CF01E1CE453006C907E /* HSHomeworkSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSHomeworkSubCell.xib; sourceTree = "<group>"; };
+		1A0C1CF31E1CE46E006C907E /* HSHomeworkObjCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkObjCell.swift; sourceTree = "<group>"; };
+		1A0C1CF41E1CE46E006C907E /* HSHomeworkObjCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSHomeworkObjCell.xib; sourceTree = "<group>"; };
+		1A0C1CF71E1CE4B0006C907E /* HSHomeworkObjModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkObjModel.swift; sourceTree = "<group>"; };
+		1A0C1CF91E1CE4C1006C907E /* HSHomeworkSubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkSubModel.swift; sourceTree = "<group>"; };
+		1A0C1CFB1E1CE51B006C907E /* HSHomeworkObjViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkObjViewModel.swift; sourceTree = "<group>"; };
+		1A0C1CFD1E1CE533006C907E /* HSHomeworkSubViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkSubViewModel.swift; sourceTree = "<group>"; };
 		1A231E631E13BC7E0023EF02 /* UILabel+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
 		1A231E671E13E4BA0023EF02 /* HSScheduleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScheduleModel.swift; sourceTree = "<group>"; };
 		1A231E691E13E4F90023EF02 /* HSScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScheduleCell.swift; sourceTree = "<group>"; };
+		1A8837BF1E1BB77D0053BD93 /* HSHomeWorkListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeWorkListViewModel.swift; sourceTree = "<group>"; };
 		1AA288741E12BD8F001902D9 /* UIImage+WithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+WithColor.swift"; sourceTree = "<group>"; };
 		1AB16A9F1E0E56B300972AFF /* HSScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScheduleViewController.swift; sourceTree = "<group>"; };
 		1AB16AA11E0E56CA00972AFF /* HSAboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSAboutUsViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +116,17 @@
 		1AF28B1E1E1640670000E57D /* HSReplayListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSReplayListView.swift; sourceTree = "<group>"; };
 		1AF28B201E16419F0000E57D /* HSReplayListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSReplayListModel.swift; sourceTree = "<group>"; };
 		1AF28B221E1643D70000E57D /* HSMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMessageViewModel.swift; sourceTree = "<group>"; };
+		1AF9BA961E1680AA008A6F1A /* HSHomeworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkModel.swift; sourceTree = "<group>"; };
+		1AF9BA981E16C377008A6F1A /* HSClassroomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSClassroomModel.swift; sourceTree = "<group>"; };
+		1AF9BA9A1E16C396008A6F1A /* HSScoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScoreModel.swift; sourceTree = "<group>"; };
+		1AF9BAA21E16C93F008A6F1A /* HSHomeworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHomeworkCell.swift; sourceTree = "<group>"; };
+		1AF9BAA31E16C93F008A6F1A /* HSHomeworkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSHomeworkCell.xib; sourceTree = "<group>"; };
+		1AF9BAA61E16C95D008A6F1A /* HSClassroomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSClassroomCell.swift; sourceTree = "<group>"; };
+		1AF9BAA71E16C95D008A6F1A /* HSClassroomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSClassroomCell.xib; sourceTree = "<group>"; };
+		1AF9BAAA1E16C976008A6F1A /* HSScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScoreCell.swift; sourceTree = "<group>"; };
+		1AF9BAAB1E16C976008A6F1A /* HSScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSScoreCell.xib; sourceTree = "<group>"; };
+		1AF9BAB61E173E78008A6F1A /* HSClassroomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSClassroomViewModel.swift; sourceTree = "<group>"; };
+		1AF9BAB81E173EA5008A6F1A /* HSScoreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSScoreViewModel.swift; sourceTree = "<group>"; };
 		B7E2429D31ECCD2741686500 /* Pods_HomeAndSchool01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeAndSchool01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68F51CB9438098C149599A7 /* Pods-HomeAndSchool01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.release.xcconfig"; sourceTree = "<group>"; };
 		F158E030843FCFA3E07AC947 /* Pods-HomeAndSchool01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeAndSchool01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeAndSchool01/Pods-HomeAndSchool01.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +144,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0C1CE91E1CE2BA006C907E /* HomeworkDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1A0C1D011E1CE568006C907E /* VC */,
+				1A0C1D001E1CE557006C907E /* M */,
+				1A0C1CFF1E1CE543006C907E /* VM */,
+			);
+			name = HomeworkDetail;
+			sourceTree = "<group>";
+		};
+		1A0C1CFF1E1CE543006C907E /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				1A0C1CFB1E1CE51B006C907E /* HSHomeworkObjViewModel.swift */,
+				1A0C1CFD1E1CE533006C907E /* HSHomeworkSubViewModel.swift */,
+			);
+			name = VM;
+			sourceTree = "<group>";
+		};
+		1A0C1D001E1CE557006C907E /* M */ = {
+			isa = PBXGroup;
+			children = (
+				1A0C1CF71E1CE4B0006C907E /* HSHomeworkObjModel.swift */,
+				1A0C1CF91E1CE4C1006C907E /* HSHomeworkSubModel.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		1A0C1D011E1CE568006C907E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1A0C1CDB1E1CDB0C006C907E /* HSHomeDetailController.swift */,
+				1A0C1CEF1E1CE453006C907E /* HSHomeworkSubCell.swift */,
+				1A0C1CF01E1CE453006C907E /* HSHomeworkSubCell.xib */,
+				1A0C1CF31E1CE46E006C907E /* HSHomeworkObjCell.swift */,
+				1A0C1CF41E1CE46E006C907E /* HSHomeworkObjCell.xib */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
 		1AE9C5941E0BEAF70036F9E3 = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +235,9 @@
 		1AE9C5B51E0BECCC0036F9E3 /* Classroom */ = {
 			isa = PBXGroup;
 			children = (
-				1AE9C5C61E0BEFC40036F9E3 /* HSClassroomController.swift */,
+				1AF9BA9C1E16C7C5008A6F1A /* VM */,
+				1AF9BA9E1E16C7D2008A6F1A /* M */,
+				1AF9BA9D1E16C7CB008A6F1A /* VC */,
 			);
 			path = Classroom;
 			sourceTree = "<group>";
@@ -161,7 +245,10 @@
 		1AE9C5B61E0BECCC0036F9E3 /* Homework */ = {
 			isa = PBXGroup;
 			children = (
-				1AE9C5C41E0BEFB10036F9E3 /* HSHomeworkController.swift */,
+				1A0C1CE91E1CE2BA006C907E /* HomeworkDetail */,
+				1AF9BA951E167BAD008A6F1A /* VM */,
+				1AF9BA941E167B6A008A6F1A /* VC */,
+				1AF9BA931E167B62008A6F1A /* M */,
 			);
 			path = Homework;
 			sourceTree = "<group>";
@@ -225,7 +312,9 @@
 		1AE9C5BC1E0BECCD0036F9E3 /* Score */ = {
 			isa = PBXGroup;
 			children = (
-				1AE9C5C81E0BEFD30036F9E3 /* HSExaminationController.swift */,
+				1AF9BAA11E16C82B008A6F1A /* VM */,
+				1AF9BA9F1E16C810008A6F1A /* M */,
+				1AF9BAA01E16C81A008A6F1A /* VC */,
 			);
 			path = Score;
 			sourceTree = "<group>";
@@ -264,6 +353,84 @@
 			children = (
 				1AF28B141E1510330000E57D /* HSMessageListViewModel.swift */,
 				1AF28B221E1643D70000E57D /* HSMessageViewModel.swift */,
+			);
+			name = VM;
+			sourceTree = "<group>";
+		};
+		1AF9BA931E167B62008A6F1A /* M */ = {
+			isa = PBXGroup;
+			children = (
+				1AF9BA961E1680AA008A6F1A /* HSHomeworkModel.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		1AF9BA941E167B6A008A6F1A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1AE9C5C41E0BEFB10036F9E3 /* HSHomeworkController.swift */,
+				1AF9BAA21E16C93F008A6F1A /* HSHomeworkCell.swift */,
+				1AF9BAA31E16C93F008A6F1A /* HSHomeworkCell.xib */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		1AF9BA951E167BAD008A6F1A /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				1A8837BF1E1BB77D0053BD93 /* HSHomeWorkListViewModel.swift */,
+			);
+			name = VM;
+			sourceTree = "<group>";
+		};
+		1AF9BA9C1E16C7C5008A6F1A /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				1AF9BAB61E173E78008A6F1A /* HSClassroomViewModel.swift */,
+			);
+			name = VM;
+			sourceTree = "<group>";
+		};
+		1AF9BA9D1E16C7CB008A6F1A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1AE9C5C61E0BEFC40036F9E3 /* HSClassroomController.swift */,
+				1AF9BAA61E16C95D008A6F1A /* HSClassroomCell.swift */,
+				1AF9BAA71E16C95D008A6F1A /* HSClassroomCell.xib */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		1AF9BA9E1E16C7D2008A6F1A /* M */ = {
+			isa = PBXGroup;
+			children = (
+				1AF9BA981E16C377008A6F1A /* HSClassroomModel.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		1AF9BA9F1E16C810008A6F1A /* M */ = {
+			isa = PBXGroup;
+			children = (
+				1AF9BA9A1E16C396008A6F1A /* HSScoreModel.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		1AF9BAA01E16C81A008A6F1A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1AE9C5C81E0BEFD30036F9E3 /* HSExaminationController.swift */,
+				1AF9BAAA1E16C976008A6F1A /* HSScoreCell.swift */,
+				1AF9BAAB1E16C976008A6F1A /* HSScoreCell.xib */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		1AF9BAA11E16C82B008A6F1A /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				1AF9BAB81E173EA5008A6F1A /* HSScoreViewModel.swift */,
 			);
 			name = VM;
 			sourceTree = "<group>";
@@ -349,11 +516,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF9BAA51E16C93F008A6F1A /* HSHomeworkCell.xib in Resources */,
 				1AF28B101E150FB90000E57D /* HSMessageCell.xib in Resources */,
+				1AF9BAA91E16C95D008A6F1A /* HSClassroomCell.xib in Resources */,
 				1AE9C5AB1E0BEAF70036F9E3 /* LaunchScreen.storyboard in Resources */,
+				1A0C1CF61E1CE46E006C907E /* HSHomeworkObjCell.xib in Resources */,
 				1AE9C5A81E0BEAF70036F9E3 /* Assets.xcassets in Resources */,
+				1A0C1CF21E1CE453006C907E /* HSHomeworkSubCell.xib in Resources */,
 				1AE9C5A61E0BEAF70036F9E3 /* Main.storyboard in Resources */,
 				1AE9C5B31E0BEC0F0036F9E3 /* tabar.plist in Resources */,
+				1AF9BAAD1E16C976008A6F1A /* HSScoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,36 +585,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A231E6A1E13E4F90023EF02 /* HSScheduleCell.swift in Sources */,
+				1AF9BAAC1E16C976008A6F1A /* HSScoreCell.swift in Sources */,
+				1AF9BAB71E173E78008A6F1A /* HSClassroomViewModel.swift in Sources */,
 				1AF28B231E1643D70000E57D /* HSMessageViewModel.swift in Sources */,
 				1AE9C5C31E0BEF9D0036F9E3 /* HSMessageController.swift in Sources */,
 				1AE9C5BF1E0BEF2D0036F9E3 /* HSLoginController.swift in Sources */,
 				1AE9C5C51E0BEFB10036F9E3 /* HSHomeworkController.swift in Sources */,
 				1AE9C5CD1E0BF2230036F9E3 /* UIColor+Extension.swift in Sources */,
+				1A0C1CFE1E1CE533006C907E /* HSHomeworkSubViewModel.swift in Sources */,
 				1AF28B1F1E1640670000E57D /* HSReplayListView.swift in Sources */,
+				1AF9BA9B1E16C396008A6F1A /* HSScoreModel.swift in Sources */,
 				1AE9C5CB1E0BF2050036F9E3 /* Bundle+Extension.swift in Sources */,
+				1AF9BA971E1680AA008A6F1A /* HSHomeworkModel.swift in Sources */,
 				1AA288751E12BD8F001902D9 /* UIImage+WithColor.swift in Sources */,
 				1ADE365D1E113DF3001609DE /* HSAFNWorkTools.swift in Sources */,
 				1AB16AA21E0E56CA00972AFF /* HSAboutUsViewController.swift in Sources */,
+				1A0C1CF11E1CE453006C907E /* HSHomeworkSubCell.swift in Sources */,
 				1AE9C6211E0D160D0036F9E3 /* HSCommonFile.swift in Sources */,
 				1AF28B091E14F40C0000E57D /* HSAlertView.swift in Sources */,
+				1A8837C01E1BB77D0053BD93 /* HSHomeWorkListViewModel.swift in Sources */,
 				1AB16AA01E0E56B300972AFF /* HSScheduleViewController.swift in Sources */,
 				1AE9C5C11E0BEF5D0036F9E3 /* HSTabBarController.swift in Sources */,
+				1AF9BAB91E173EA5008A6F1A /* HSScoreViewModel.swift in Sources */,
 				1AF28B0F1E150FB90000E57D /* HSMessageCell.swift in Sources */,
+				1AF9BAA41E16C93F008A6F1A /* HSHomeworkCell.swift in Sources */,
+				1AF9BA991E16C377008A6F1A /* HSClassroomModel.swift in Sources */,
 				1AF28B151E1510330000E57D /* HSMessageListViewModel.swift in Sources */,
+				1A0C1CF81E1CE4B0006C907E /* HSHomeworkObjModel.swift in Sources */,
 				1AE9C61D1E0D12EC0036F9E3 /* HSNavigationController.swift in Sources */,
 				1AE9C5C71E0BEFC40036F9E3 /* HSClassroomController.swift in Sources */,
+				1A0C1CDC1E1CDB0C006C907E /* HSHomeDetailController.swift in Sources */,
 				1AB16AA61E0E573400972AFF /* HSSetUpViewController.swift in Sources */,
 				1AE9C6231E0D16890036F9E3 /* UIBarbuttomItem+Extension.swift in Sources */,
+				1A0C1CFA1E1CE4C1006C907E /* HSHomeworkSubModel.swift in Sources */,
+				1A0C1CF51E1CE46E006C907E /* HSHomeworkObjCell.swift in Sources */,
 				1AB16AA41E0E56E200972AFF /* HSFeedBackViewController.swift in Sources */,
 				1AE9C61F1E0D14630036F9E3 /* HSLeftViewController.swift in Sources */,
 				1AF28B131E15100E0000E57D /* HSMessageModel.swift in Sources */,
 				1AF28B211E16419F0000E57D /* HSReplayListModel.swift in Sources */,
 				1AE9C5C91E0BEFD30036F9E3 /* HSExaminationController.swift in Sources */,
+				1AF9BAA81E16C95D008A6F1A /* HSClassroomCell.swift in Sources */,
 				1AE9C5A11E0BEAF70036F9E3 /* AppDelegate.swift in Sources */,
 				1AF28B171E1576E90000E57D /* HSReleaseInfoController.swift in Sources */,
 				1AE9C6251E0D1E340036F9E3 /* HSDrawerController.swift in Sources */,
 				1A231E681E13E4BA0023EF02 /* HSScheduleModel.swift in Sources */,
 				1A231E641E13BC7E0023EF02 /* UILabel+extension.swift in Sources */,
+				1A0C1CFC1E1CE51B006C907E /* HSHomeworkObjViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

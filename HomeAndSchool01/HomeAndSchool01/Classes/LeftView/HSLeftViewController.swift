@@ -208,9 +208,8 @@ class HSLeftViewController: UIViewController {
             */
         case 104:
 //            let loginVC = HSLoginController()
-            break
-        
-            
+            let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HSLoginController")
+            UIApplication.shared.keyWindow?.rootViewController = loginVC
         default:
             break
         }

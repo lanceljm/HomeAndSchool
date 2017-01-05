@@ -34,7 +34,6 @@ class HSReleaseInfoController: UIViewController {
         
         customSubmitBtn.layer.cornerRadius = 5
         customSubmitBtn.layer.masksToBounds = true
-        
     }
     
     //删除
